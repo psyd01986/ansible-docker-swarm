@@ -1,11 +1,22 @@
 ---
-- name: pre-reqs | Installing Python Pre-Reqs
+- name: pre-reqs | Installing Python Pre-Reqs for all exclude Ubuntu 20
   pip:
     name: "{{ item }}"
     state: "present"
   become: true
   with_items:
     - 'docker-py'
+  when: ansible_distribution_version != "20.04"
+
+- name: pre-reqs | Installing Python Pre-Reqs for Ubuntu 20
+  pip:
+    name: "{{ item }}"
+    state: "present"
+    executable: pip3
+  become: true
+  with_items:
+    - 'docker-py'
+  when: ansible_distribution_version == "20.04"
 
 - name: pre-reqs | Ensuring Docker Engine Is Running
   service:
