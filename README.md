@@ -7,6 +7,7 @@ Requirements
 ------------
 
 Install [Ansible] roles required:
+
 ```
 sudo ansible-galaxy install -r requirements.yml
 ```
@@ -71,6 +72,13 @@ Example Playbook
   tasks:
 ```
 
+## Дополнительно [psyd01986]
+
+```
+Добавил поддержку Ubuntu 20.04
+```
+
+
 License
 -------
 
@@ -79,11 +87,8 @@ BSD
 Author Information
 ------------------
 
-
 Larry Smith Jr.
+
 - @mrlesmithjr
 - http://everythingshouldbevirtual.com
 - mrlesmithjr [at] gmail.com
-
-[Ansible]: <https://www.ansible.com>
-[Docker]: <https://www.docker.com>
