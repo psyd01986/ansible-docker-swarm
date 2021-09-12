@@ -1,0 +1,8 @@
+---
+- name: Play Docker Swarm
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - name: Include ansible-docker-swarm
+      include_role:
+        name: ../ansible-docker-swarm
